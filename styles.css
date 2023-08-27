@@ -25,7 +25,7 @@
   position: relative;
 } */
 
-.container{
+.main-screen{
   width: 100vw;
   height: 100vh;
   background: var(--green);
@@ -129,6 +129,11 @@ main{
   border: none;
 }
 
+.item{
+  cursor: pointer;
+  border-radius: 50%;
+}
+
 #rock{
   background-image: url("./assets/Group\ 2.png");
 }
@@ -176,6 +181,10 @@ main{
   letter-spacing: 2px;
 }
 
+#lost-text, #tie-text, .replayBtn{
+  display: none;
+}
+
 .result > button {
   border: 2px solid var(--white);
   background-color: var(--white);
@@ -185,7 +194,7 @@ main{
   font-size: 0.8rem;
   letter-spacing: 1.5px;
   width: 70%;
-
+  cursor: pointer;
 }
 
 .side{
@@ -219,7 +228,6 @@ main{
 #user-paper, #pc-paper{
   background-image: url("./assets/Group\ 1.png");
   display: none;
-
 }
 
 .green-background{
@@ -248,10 +256,14 @@ main{
   bottom: 50%;
   right: 2%;
   z-index: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
 }
 
 .rules{
   background-color: var(--dark-green);
+  color: var(--white);
   height: 44%;
   width: 21%;
   border: 7px solid var(--white);
@@ -263,6 +275,7 @@ main{
   position: absolute;
   bottom: 10%;
   right: 3%;
+  display: none;
 }
 
 .rules > h4 {
@@ -346,6 +359,7 @@ main{
   letter-spacing: 1.5px;
   width: 12rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 
@@ -368,9 +382,9 @@ footer > button{
   font-size: 1rem;
   letter-spacing: 2px;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .nextBtn{
-  /* display: inline-block; */
-  /* display: none; */
+  display: none;
 }
