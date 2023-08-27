@@ -95,7 +95,6 @@ main{
 
 /* playing zone */
 .playing-zone{
-  border: 1px solid white;
   height: full;
   width: 50%;
   display: flex;
@@ -103,6 +102,7 @@ main{
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: relative;
   /* display: none; */
 }
 
@@ -111,6 +111,31 @@ main{
   justify-content: space-between;
   width: 50%;
   height: 40%;
+  z-index: 2;
+}
+
+#line1, #line2, #line3 {
+  position: absolute;
+  z-index: -1;
+}
+
+#line1 {
+  left: 35%;
+  top: 25%;
+  width: 30%;
+  height: 5%;
+}
+
+#line3{
+  left:34%;
+  top: 35%;
+  width: 13%;
+}
+
+#line2{
+  left:53%;
+  top: 35% ;
+  width: 13%;
 }
 
 .playing-zone__bottom {
@@ -127,15 +152,18 @@ main{
   width: 150px;
   height: 150px;
   border: none;
+
 }
 
 .item{
   cursor: pointer;
   border-radius: 50%;
+  z-index: 2;
 }
 
 #rock{
   background-image: url("./assets/Group\ 2.png");
+
 }
 
 #scissor{
@@ -148,7 +176,6 @@ main{
 
 /* result zone */
 .result-zone {
-  border: 2px solid white;
   height: 90%;
   width: 50%;
   display: flex;
